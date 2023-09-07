@@ -37,4 +37,3 @@ if matching_letters == 1:
     print(str(matching_letters) + " instance of " + str(single_character) + " found in " + str(five_letter_word))
 if matching_letters > 1:
     print(str(matching_letters) + " instances of " + str(single_character) + " found in " + str(five_letter_word))
-
