@@ -27,4 +27,16 @@ def max(nums: list[int]) -> int:
         checker += 1
     return largest
 
-print(max([]))
+def is_equal(ints_one: list[int], ints_two: list[int]) -> bool:
+    """Checks to see if each corresponding value in two lists are equal, returns False if not."""
+    checker: int = 0
+    # Make sure that the lists are of equal length first.
+    if len(ints_one) != len(ints_two):
+        return False
+    # Check each value.
+    while (checker < len(ints_one)):
+        if ints_one[checker] == ints_two[checker]:
+            checker += 1
+        else:
+            return False
+    return True
