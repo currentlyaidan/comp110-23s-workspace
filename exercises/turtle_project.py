@@ -3,6 +3,7 @@
 __author__ = "730679404"
 
 from turtle import Turtle, colormode, done, Screen
+from random import randint
 screen = Screen()
 colormode(255)
 screen.setup(width=1.0, height=1.0, startx=0, starty=1)
@@ -58,6 +59,5 @@ def land() -> None:
     land.end_fill()
 
 
-# __name__ is "__main__" command
-main()
-done()
+if __name__ == "__main__":
+    main()
