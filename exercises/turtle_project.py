@@ -17,6 +17,7 @@ def main() -> None:
     hinapants()
     hinashirt()
     hinajacket()
+    hina()
     repeat: int = 0
     while repeat < 150:
         city(randint(-733,720),randint(-400,0),randint(10,100),randint(5,50))
@@ -178,6 +179,31 @@ def hinajacket() -> None:
     jacket.pendown()
     jacket.goto(-160,190)
     jacket.goto(-155,175)
+
+def hina() -> None:
+    """Draw's Hina."""
+    hina: Turtle = Turtle()
+    prepare_pen(-140,-30,hina)
+    hina.color((0,0,0),(255,243,193))
+    hina.begin_fill()
+    hina.goto(-138,-45)
+    hina.goto(-130,-45)
+    hina.goto(-90,-20)
+    hina.goto(-88,-21)
+    hina.goto(-86,-21)
+    hina.goto(-86,-22)
+    hina.goto(-73,-50)
+    hina.goto(-70,-50)
+    hina.goto(-67,-50)
+    hina.goto(-60,-65)
+    hina.goto(-47,-77)
+    hina.goto(-46,-78)
+    hina.goto(-46,-78)
+    hina.goto(-45,-80)
+    hina.goto(-79,-105)
+    hina.goto(-80,-112)
+    hina.goto(-80,-115)
+    hina.goto(-78,-117)
 
 
 # Define the procedures for other components    
