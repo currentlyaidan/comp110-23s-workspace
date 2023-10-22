@@ -274,6 +274,11 @@ def hinahair() -> None:
     hair.goto(-23,-60)
     hair.end_fill()
 
+    hair.penup()
+    hair.goto(-180,-140)
+    hair.pendown()
+    hair.goto(-230,-170)
+
 
 
 # Define the procedures for other components    
