@@ -14,7 +14,7 @@ def main() -> None:
     land()
     water()
     repeat: int = 0
-    while repeat < 1:
+    while repeat < 300:
         city(randint(-733, 720), randint(-400, 0), randint(10, 100), randint(5, 50))
         repeat += 1
     hinapants()
