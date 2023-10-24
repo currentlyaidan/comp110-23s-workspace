@@ -14,13 +14,14 @@ def main() -> None:
     land()
     water()
     repeat: int = 0
-    while repeat < 400:
+    while repeat < 1:
         city(randint(-733, 720), randint(-400, 0), randint(10, 100), randint(5, 50))
         repeat += 1
     hinapants()
     hinashirt()
     hinajacket()
     hina()
+    hinaface()
     hinahair()
     done()
 
@@ -293,6 +294,19 @@ def hina() -> None:
     hina.goto(-274, -20)
     hina.goto(-280, 10)
     hina.end_fill()
+
+
+def hinaface() -> None:
+    """Draws Hina's face."""
+    face: Turtle = Turtle()
+    prepare_pen(-100,-145, face)
+    face.color((0, 0, 0), (0, 0, 0))
+    face.begin_fill()
+    face.goto(-90, -135)
+    face.goto(-87,-128)
+    face.goto(-92,-130)
+    face.goto(-88,-124)
+    face.goto(-96,-130)
 
 
 def hinahair() -> None:
