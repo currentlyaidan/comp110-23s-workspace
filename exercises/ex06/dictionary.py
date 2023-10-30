@@ -1,4 +1,4 @@
-"""EX06 Dictionary"""
+"""EX06 Dictionary."""
 
 __author__ = "730679404"
 
@@ -15,7 +15,7 @@ def invert(inverse: dict[str, str]) -> dict[str, str]:
 
 def favorite_color(pref: dict[str, str]) -> str:
     """Returns the most popular color."""
-    popularity: dict[str,int] = {}
+    popularity: dict[str, int] = {}
     popcolor: str = ""
     count: int = 0
     for key in pref:
@@ -72,7 +72,7 @@ def update_attendance(inputs: dict[str, list[str]], day: str, student: str) -> d
 
 def main() -> None:
     """The body of my program."""
-    attendance_log: dict[str,list[str]] = {"Monday": ["Eren", "Mikasa"], "Tuesday": ["Mikasa"]}
+    attendance_log: dict[str, list[str]] = {"Monday": ["Eren", "Mikasa"], "Tuesday": ["Mikasa"]}
     print(update_attendance(attendance_log, "Tuesday", "Eren"))
     print(update_attendance(attendance_log, "Wednesday", "Armin"))
 
