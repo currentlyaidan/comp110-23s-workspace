@@ -1,15 +1,11 @@
 """Testing all functions of the dictionary."""
 
-__author__ ="730679404"
+__author__ = "730679404"
 
-import pytest
-from exercises.ex06.dictionary import invert
-from exercises.ex06.dictionary import favorite_color
-from exercises.ex06.dictionary import count
-from exercises.ex06.dictionary import alphabetizer
-from exercises.ex06.dictionary import update_attendance
+from exercises.ex06.dictionary import invert, favorite_color, count, alphabetizer, update_attendance
 
 # test invert function
+
 
 def test_one_item_dictionary() -> None:
     """invert({ one item dictionary }) will return the item inverted."""
@@ -27,6 +23,7 @@ def test_no_item_dictionary_invert() -> None:
     assert invert(test_dict) == {}
 
 # test favorite_color function
+
 
 def test_short_favorite_color() -> None:
     """favorite_color({ short dictionary }) returns blue, the most popular color."""
@@ -47,6 +44,7 @@ def test_no_favorite_color() -> None:
 
 # test count function
 
+
 def test_three_two_one_list() -> None:
     """count() will return a dictionary, citing that each word has been said either one, two, or three times."""
     test_list: list[str] = ["scarf", "fight", "scarf", "scarf", "titan", "titan"]
@@ -66,6 +64,7 @@ def test_empty_list() -> None:
 
 # test alphabetizer
 
+
 def test_short_list() -> None:
     """alphabetizer() will return each item sorted by the first letter of the word."""
     test_list: list[str] = ["happiness", "became", "bright", "the", "hearts", "battle", "gave"]
@@ -84,6 +83,7 @@ def test_cloned_word() -> None:
     assert alphabetizer(test_list) == {'g': ['go', 'go', 'go', 'go', 'go', 'go', 'go', 'go', 'go', 'go']}
 
 # test update_attendance
+
 
 def test_one_on_monday() -> None:
     """update_attendance will add a student who was present on monday."""

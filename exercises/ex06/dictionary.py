@@ -52,10 +52,10 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
         lowercase = words[idx]
         lowercase = lowercase.lower()
         if lowercase[0] in result:
-            result[lowercase[0]].append(lowercase)
+            result[lowercase[0]].append(words[idx])
         else:
             result[lowercase[0]] = list()
-            result[lowercase[0]].append(lowercase)
+            result[lowercase[0]].append(words[idx])
         idx += 1
     return result
 
@@ -63,7 +63,8 @@ def alphabetizer(words: list[str]) -> dict[str, list[str]]:
 def update_attendance(inputs: dict[str, list[str]], day: str, student: str) -> dict[str, list[str]]:
     """Receive inputs and update the attendance log."""
     if day in inputs:
-        inputs[day].append(student)
+        if not (student in inputs[day]):
+            inputs[day].append(student)
     else:
         inputs[day] = list()
         inputs[day].append(student)
