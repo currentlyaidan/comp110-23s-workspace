@@ -19,9 +19,30 @@ class River:
             self.bears.append(Bear())
 
     def check_ages(self):
+        surviving_bears: list[Bear] = []
+        surviving_fish: list[Fish] = []
+        for fanimal in self.fish:
+            if fanimal.age < 3:
+                surviving_fish.append(fanimal)
+        for banimal in self.bears:
+            if banimal.age < 5:
+                surviving_bears.append(banimal)    
+        self.bears = surviving_bears
+        self.fish = surviving_fish
+        return None
+
+    def remove_fish(self, amount: int):
+        idx: int = 0
+        while idx < amount:
+            self.fish.pop[0]
+            idx += 1
         return None
 
     def bears_eating(self):
+        for banimal in self.bears:
+            if len(self.fish) > 5:
+                self.remove_fish(3)
+                Bear.eat(3)
         return None
     
     def check_hunger(self):
@@ -55,7 +76,7 @@ class River:
         # Remove hungry Bear's from River
         self.check_hunger()
         # Remove old Fish and Bear's from River
-        self.check_ages(self)
+        self.check_ages()
         # Simulate Fish repopulation
         self.repopulate_fish()
         # Simulate Bear repopulation
@@ -66,6 +87,6 @@ class River:
     def one_river_week(self):
         """Simulates a week."""
         times: int = 0
-        while times < 8:
-            self.one_river_day
+        while times < 7:
+            self.one_river_day()
             times += 1
