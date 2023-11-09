@@ -4,7 +4,9 @@ from exercises.ex09.fish import Fish
 from exercises.ex09.bear import Bear
 
 class River:
-    
+    day: int
+    bears: list[Bear]
+    fish: list[Fish]
     def __init__(self, num_fish: int, num_bears:int):
         """New River with num_fish Fish and num_bears Bears"""
         self.day: int = 0
@@ -32,6 +34,10 @@ class River:
         return None
     
     def view_river(self):
+        status: str = f"~~~ Day {self.day}: ~~~ \n"
+        status += f"Fish population: {len(self.fish)} \n"
+        status += f"Bear population: {len(self.bears)}"
+        print(status)
         return None
             
     def one_river_day(self):
@@ -49,11 +55,17 @@ class River:
         # Remove hungry Bear's from River
         self.check_hunger()
         # Remove old Fish and Bear's from River
-        self.check_ages()
+        self.check_ages(self)
         # Simulate Fish repopulation
         self.repopulate_fish()
         # Simulate Bear repopulation
         self.repopulate_bears()
         # Visualize River
         self.view_river()
-            
+    
+    def one_river_week(self):
+        """Simulates a week."""
+        times: int = 0
+        while times < 8:
+            self.one_river_day
+            times += 1
