@@ -33,25 +33,46 @@ class River:
 
     def remove_fish(self, amount: int):
         idx: int = 0
+        fish_list: list[Fish] = self.fish
         while idx < amount:
-            self.fish.pop[0]
+            fish_list.pop(0)
             idx += 1
+        self.fish = fish_list
         return None
 
     def bears_eating(self):
         for banimal in self.bears:
             if len(self.fish) > 5:
                 self.remove_fish(3)
-                Bear.eat(3)
+                banimal.eat(3)
         return None
     
     def check_hunger(self):
+        survivors: list[Bear] = self.bears
+        idx: int = 0
+        while idx < len(self.bears):
+            if self.bears[idx].hunger_score == 0:
+                survivors.pop(idx)
+            idx += 1
+        self.bear = survivors
         return None
         
     def repopulate_fish(self):
+        offspring: int = 0
+        if len(self.fish) >=  2:
+            offspring = (len(self.fish) // 2) * 4
+            while offspring > 0:
+                self.fish.append(Fish())
+                offspring -= 1
         return None
     
     def repopulate_bears(self):
+        offspring: int = 0
+        if len(self.bears) >= 2:
+            offspring = (len(self.bears) // 2)
+            while offspring > 0:
+                self.bears.append(Bear())
+                offspring -= 1
         return None
     
     def view_river(self):
